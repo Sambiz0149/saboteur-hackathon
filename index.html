@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090909">
+    <title>SABOTEUR — Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="wordmark" href="/" aria-label="SABOTEUR home">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>SABOTEUR<span class="brand-period">.</span></span>
+        </a>
+        <div class="topbar-meta"><span class="status-dot"></span> LOCAL DEMO <span class="meta-divider">/</span> CHECKOUT V1</div>
+      </header>
+
+      <main>
+        <section class="intro" aria-labelledby="page-title">
+          <div class="eyebrow"><span>01</span> &nbsp; SECURE CHECKOUT <span class="eyebrow-line"></span></div>
+          <h1 id="page-title">One good thing.<br><span>One easy checkout.</span></h1>
+          <p class="intro-copy">A small demo of the last step between you<br class="desktop-break"> and something worth keeping.</p>
+        </section>
+
+        <section class="checkout" aria-label="Checkout">
+          <div class="checkout-main">
+            <div class="section-heading">
+              <span class="section-index">01 / ITEM</span>
+              <span class="section-note">YOUR SELECTION</span>
+            </div>
+
+            <article class="product">
+              <div class="product-art" aria-hidden="true">
+                <div class="art-grid"></div>
+                <div class="art-orbit orbit-one"></div>
+                <div class="art-orbit orbit-two"></div>
+                <div class="art-core"></div>
+                <span class="art-label">S—01</span>
+              </div>
+              <div class="product-info">
+                <div class="product-category">SABOTEUR / OBJECTS</div>
+                <h2>The Essential</h2>
+                <p>Considered design. Nothing extra.</p>
+                <div class="product-bottom">
+                  <span class="product-quantity">QTY <strong>01</strong></span>
+                  <span class="product-price">$100.00</span>
+                </div>
+              </div>
+            </article>
+
+            <div class="discount-block">
+              <label class="section-index" for="discount-code">02 / DISCOUNT CODE</label>
+              <form class="discount-form" id="discount-form">
+                <input id="discount-code" name="discount-code" type="text" placeholder="Enter code" autocomplete="off" aria-describedby="discount-message">
+                <button class="apply-button" type="submit">Apply <span aria-hidden="true">↗</span></button>
+              </form>
+              <p class="form-message" id="discount-message" aria-live="polite"></p>
+            </div>
+          </div>
+
+          <aside class="summary">
+            <div class="section-heading">
+              <span class="section-index">03 / SUMMARY</span>
+              <span class="summary-lock" aria-label="Local demo">LOCAL</span>
+            </div>
+            <div class="summary-lines">
+              <div class="summary-row"><span>Subtotal</span><span id="subtotal">$100.00</span></div>
+              <div class="summary-row discount-row" id="discount-row" hidden><span>Discount <span class="discount-tag">SAVE10</span></span><span id="discount-amount">−$10.00</span></div>
+              <div class="summary-row"><span>Shipping</span><span class="free-label">Complimentary</span></div>
+            </div>
+            <div class="total-row"><span>Total</span><span id="total">$100.00</span></div>
+            <button class="order-button" id="place-order" type="button">Place order <span aria-hidden="true">↗</span></button>
+            <p class="demo-note"><span class="note-icon">i</span> This local demo does not process payments.</p>
+            <div class="summary-footer">ALL PRICES IN USD <span>NO SURPRISES.</span></div>
+          </aside>
+        </section>
+
+        <section class="confirmation" id="confirmation" aria-live="polite" hidden>
+          <div class="confirmation-mark" aria-hidden="true">✓</div>
+          <div>
+            <p class="confirmation-kicker">ORDER CONFIRMED / LOCAL DEMO</p>
+            <h2>Consider it yours.</h2>
+            <p class="confirmation-copy">Your demo order is in. Final total: <strong id="confirmed-total">$100.00</strong></p>
+          </div>
+        </section>
+
+        <div class="reset-row">
+          <button class="reset-button" id="reset-demo" type="button"><span aria-hidden="true">↺</span> Reset demo</button>
+          <span>MADE FOR THE KANE CLI HACKATHON</span>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <span>© SABOTEUR 2026</span>
+        <span>BUILT TO KEEP IT SIMPLE <span class="footer-star">✳</span></span>
+      </footer>
+    </div>
+  </body>
+</html>
