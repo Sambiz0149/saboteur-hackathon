@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090909">
+    <title>SABOTEUR — Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/dashboard.css">
+    <script src="/dashboard.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <header class="topbar">
+        <a class="wordmark" href="/dashboard" aria-label="SABOTEUR verification dashboard">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span>SABOTEUR<span class="brand-period">.</span></span>
+        </a>
+        <div class="topbar-actions">
+          <span class="topbar-meta"><span class="status-dot"></span> LOCAL WORKSPACE</span>
+          <a class="checkout-link" href="/">OPEN CHECKOUT <span aria-hidden="true">↗</span></a>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero" aria-labelledby="page-title">
+          <div class="eyebrow"><span>WORKFLOW / 01—04</span><span class="eyebrow-rule"></span> KANE CLI</div>
+          <h1 id="page-title">Break it.<br><span>Prove the repair.</span></h1>
+          <p class="hero-copy">A controlled checkout demo. Run the real SAVE10 objective, read Kane's final verdict, then repair and recheck with Copilot in VS Code.</p>
+        </section>
+
+        <section class="workflow" id="workflow" aria-label="Four-stage verification workflow">
+          <article class="stage-card">
+            <div class="stage-topline"><span class="stage-number">01</span><span class="stage-state guide-state">GUIDE</span></div>
+            <h2>Baseline</h2>
+            <p>Start from the working checkout. Earlier Kane evidence is not imported into this page.</p>
+          </article>
+          <article class="stage-card">
+            <div class="stage-topline"><span class="stage-number">02</span><span class="stage-state guide-state">MANUAL</span></div>
+            <h2>Controlled mutation</h2>
+            <p>Apply a reversible demo change in <code>app.js</code> yourself. This dashboard never edits source.</p>
+          </article>
+          <article class="stage-card active-stage" id="verification-stage">
+            <div class="stage-topline"><span class="stage-number">03</span><span class="stage-state" id="verification-state">NOT RUN</span></div>
+            <h2>Kane verification</h2>
+            <p>Run the fixed checkout objective with the installed Kane CLI in agent and headless modes.</p>
+            <button class="run-button" id="run-verification" type="button">Run checkout verification <span aria-hidden="true">↗</span></button>
+          </article>
+          <article class="stage-card" id="repair-stage">
+            <div class="stage-topline"><span class="stage-number">04</span><span class="stage-state guide-state" id="repair-state">NOT RUN</span></div>
+            <h2>Repair / recheck</h2>
+            <p id="repair-copy">After a confirmed failure, use Copilot Agent in VS Code to inspect and repair the code, then rerun the verification.</p>
+          </article>
+        </section>
+
+        <section class="run-panel" aria-labelledby="run-title">
+          <div class="panel-heading">
+            <div>
+              <p class="section-label">LIVE RUN / CURRENT CHECKOUT</p>
+              <h2 id="run-title">SAVE10 checkout objective</h2>
+            </div>
+            <span class="run-status" id="run-status">NOT RUN</span>
+          </div>
+          <p class="objective">Enter SAVE10, verify the checkout total is $90.00, place the order, and verify the confirmation total is $90.00.</p>
+          <div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div>
+          <p class="progress-message" id="progress-message" role="status" aria-live="polite">No run has been started in this dashboard session.</p>
+
+          <div class="result-card" id="result-card" hidden aria-live="polite">
+            <div class="result-heading">
+              <span class="result-mark" id="result-mark" aria-hidden="true"></span>
+              <div><p class="section-label" id="result-label">KANE RESULT</p><p class="result-message" id="result-message"></p></div>
+            </div>
+            <p class="process-warning" id="process-warning" hidden></p>
+            <p class="check-status" id="check-status" hidden></p>
+            <div class="result-totals" id="result-totals" hidden>
+              <div><span>CHECKOUT TOTAL</span><strong id="checkout-total">—</strong></div>
+              <div><span>ORDER CONFIRMATION</span><strong id="confirmation-total">—</strong></div>
+            </div>
+          </div>
+
+          <p class="privacy-note"><span aria-hidden="true">i</span> Results are from the current run only. Raw Kane output, credentials, local evidence paths, and private result URLs are never sent to this page.</p>
+        </section>
+
+        <section class="agent-guide" aria-labelledby="agent-title">
+          <div class="guide-index">VS CODE / COPILOT</div>
+          <div class="guide-content">
+            <h2 id="agent-title">Repair stays agent-led.</h2>
+            <p>This dashboard does not invoke Copilot. After a confirmed failure, open the workspace in VS Code, ask Copilot Agent to inspect the checkout code and the actual Kane result, review its minimal patch, then return here and rerun the same objective.</p>
+          </div>
+          <a href="/" class="text-link">VIEW CHECKOUT <span aria-hidden="true">↗</span></a>
+        </section>
+      </main>
+
+      <footer class="footer"><span>SABOTEUR / LOCAL DEMO</span><span>NO PAYMENT PROCESSING <span class="footer-star">✳</span></span></footer>
+    </div>
+  </body>
+</html>

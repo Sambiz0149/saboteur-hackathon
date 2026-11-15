@@ -1,0 +1,3 @@
+{"fixture":"SYNTHETIC ONLY — NOT REAL KANE EVIDENCE","type":"result","message":"Checkout total: $90.00"}
+this is deliberately malformed synthetic NDJSON
+{"fixture":"SYNTHETIC ONLY — NOT REAL KANE EVIDENCE","type":"run_end","status":"passed"}

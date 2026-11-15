@@ -4,6 +4,7 @@
   "private": true,
   "description": "A small local checkout demo for the Kane CLI hackathon",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "test": "node --test"
   }
 }
